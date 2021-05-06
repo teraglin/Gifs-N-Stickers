@@ -1,6 +1,9 @@
 import { apiKey } from './keys.js'
 
 const baseUrl = "https://api.giphy.com/v1/"
+const gifSearch = "gifs/search"
+const stickerSearch = "stickers/search"
+
 const searchInput = document.getElementById("search-input")
 const searchButton = document.getElementById("search-btn")
 const gifsContainer = document.querySelector(".gifs-container")
@@ -16,9 +19,7 @@ const navButtons = document.getElementById('nav-buttons')
 const btns = navButtons.getElementsByClassName('btn')
 
 
-let current = null
 let currentText = null
-
 
 // loop through all the buttons and add the active class to the current/clicked button
 for (let i=0; i < btns.length; i++) {
@@ -56,12 +57,10 @@ function createNewGif(url) {
 
 
 function clearExisting() {
-  const gifElement = document.getElementsByClassName("gif-element")
-
   // loop through the gifs container div and check how many children (<img>) are present
-  for (let i = 0; i < gifsContainer.children.length; i++) {
+  for (let item of gifsContainer.children) {
     if (gifsContainer.children.length > 0) {
-      gifsContainer.removeChild(gifElement[i])
+      gifsContainer.removeChild(item)
     }
   }
 }
@@ -70,11 +69,11 @@ function clearExisting() {
 async function search(searchEndpoint) {
   clearExisting()
 
-  const inputText = searchInput.value
+  const query = searchInput.value
   let jsonData = null
 
   try {
-    let response = await fetch(`${baseUrl + searchEndpoint}?q=${inputText + apiKey}`)
+    let response = await fetch(`${baseUrl + searchEndpoint}?q=${query + apiKey}`)
     jsonData = await response.json()
 
     for (let i = 0; i < 10; i++) {
@@ -89,10 +88,8 @@ async function search(searchEndpoint) {
 
 searchButton.addEventListener('click', () => {
   if (currentText === 'GIF') {
-    const gifSearch = "gifs/search" 
     search(gifSearch)
   } else if (currentText === 'STICKER') {
-    const stickerSearch = "stickers/search"
     search(stickerSearch)
   }
 })
