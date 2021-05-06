@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
     <script src="index.js" type="module"></script>
 </head>
 <body>
+    <header>
+        <h2>What would you like to search for?</h2>
+        <nav>
+            <div class="nav-buttons">
+                <button class="btn" id="gif-btn">GIF</button>
+                <button class="btn" id="sticker-btn">Sticker</button>
+            </div>
+            <br/><br/>
+        </nav>
+    </header>
     
+    <main id="main-content">
+        <label for="input">Search for GIF or Sticker</label><br/><br/>
+        <input type="text" name="input" placeholder="banana" id="search-input">
+        <button id="search-btn">Search</button>
+    </main>
 </body>
 </html>
