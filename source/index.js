@@ -74,7 +74,7 @@ async function search(searchEndpoint) {
   let jsonData = null
 
   try {
-    let response = await fetch(`${baseUrl}${searchEndpoint}?q=${inputText}&${apiKey}`)
+    let response = await fetch(`${baseUrl + searchEndpoint}?q=${inputText + apiKey}`)
     jsonData = await response.json()
 
     for (let i = 0; i < 10; i++) {
