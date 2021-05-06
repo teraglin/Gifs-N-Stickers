@@ -1,5 +1,7 @@
 # vz-ak-hackathon-21
 
+# ROADMAP
+
 ##### GOAL
 An MVP that searches igs using the GIPHY API.
 
