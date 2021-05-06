@@ -11,6 +11,8 @@ const navButtons = document.getElementById('nav-buttons')
 
 // Get all buttons with class="btn" inside the container
 const btns = navButtons.getElementsByClassName('btn')
+console.log(btns)
+
 
 // loop through all the buttons and add the active class to the current/clicked button
 for (let i=0; i < btns.length; i++) {
@@ -18,6 +20,7 @@ for (let i=0; i < btns.length; i++) {
         let current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
+        console.log(current)
     });
 }
 
@@ -42,7 +45,7 @@ async function getGif(query) {
     }
 }
 
-function getSticker(query) {
+async function getSticker(query) {
     let data = null
 
     try {

@@ -27,6 +27,11 @@ body {
   height: 100px;
 }
 
+.active {
+    background-color: navy;
+    color: white;
+}
+
 /* #main-content {
   display: flex;
   flex-direction: column;
