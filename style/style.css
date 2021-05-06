@@ -11,13 +11,14 @@ body {
 
 .nav-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .btn {
   cursor: pointer;
   width: 150px;
   height: 150px;
+  font-size: 1.2em;
 }
 
 .active {
@@ -27,13 +28,15 @@ body {
 
 input {
   visibility: hidden;
-  height: 30px;
+  height: 40px;
+  font-size: 1.1em;
 }
 
 #search-btn {
   visibility: hidden;
   cursor: pointer;
-  height: 30px;
+  height: 40px;
+  font-size: 1.1em;
 }
 
 .gifs-container {
