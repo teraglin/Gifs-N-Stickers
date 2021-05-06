@@ -10,7 +10,7 @@ const stickerSearch = "stickers/search"
 const navButtons = document.getElementById('nav-buttons')
 
 // Get all buttons with class="btn" inside the container
-const = btns = navButtons.getElementsByClassName('btn')
+const btns = navButtons.getElementsByClassName('btn')
 
 // loop through all the buttons and add the active class to the current/clicked button
 for (let i=0; i < btns.length; i++) {
