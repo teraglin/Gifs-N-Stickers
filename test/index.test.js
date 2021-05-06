@@ -1,6 +1,7 @@
 const { TestScheduler } = require('@jest/core');
+const { apiKey } = require('../source/keys')
 let { repeatMessage } = require('../source/index');
 
-test("Description of test here", () => {
-    expect("data to check is passed here").toBeTruthy();
+test("API is true", () => {
+    expect(apiKey).toBeTruthy();
 });
