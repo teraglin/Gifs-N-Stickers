@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
     "start": "node source/index.js"
   },
   "keywords": [],
