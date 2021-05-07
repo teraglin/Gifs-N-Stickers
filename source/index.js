@@ -9,6 +9,7 @@ const searchButton = document.getElementById("search-btn")
 const gifsContainer = document.querySelector(".gifs-container")
 
 
+
 //--------- ACTIVE BUTTONS
 
 // Get container element for nav buttons
@@ -45,6 +46,29 @@ for (let i=0; i < btns.length; i++) {
   })
 }
 
+// shuffle array function
+
+function shuffle(array) {
+  let currentIndex = array.length;
+  //temporaryValue, randomIndex;
+  let randomIndex = null
+  let temporaryValue = null
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 //-----------
 
@@ -84,9 +108,14 @@ async function search(searchEndpoint) {
   try {
     let response = await fetch(`${baseUrl + searchEndpoint}?q=${query + apiKey}`)
     jsonData = await response.json()
+    console.log(jsonData.data.length)
+    
+    let array = shuffle(jsonData.data)
+
+    console.log(array)
 
     for (let i = 0; i < 10; i++) {
-      createNewGif(jsonData.data[i].images.original.url)
+      createNewGif(array[i].images.original.url)
     }
 
   } catch (error) {
