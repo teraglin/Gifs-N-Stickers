@@ -10,7 +10,7 @@ const gifsContainer = document.querySelector(".gifs-container")
 
 
 
-//--------- ACTIVE BUTTONS
+//ACTIVE BUTTONS
 
 // Get container element for nav buttons
 const navButtons = document.getElementById('nav-buttons')
@@ -45,10 +45,12 @@ for (let i=0; i < btns.length; i++) {
     changeSearchButtonText()
   })
 }
+//---------
 
-// shuffle array function
+// SHUFFLE FUNCTION
 
 function shuffle(array) {
+
   let currentIndex = array.length;
   //temporaryValue, randomIndex;
   let randomIndex = null
@@ -70,8 +72,7 @@ function shuffle(array) {
   return array;
 }
 
-//-----------
-
+// CHANGE SEARCH BUTTON TEXT
 function changeSearchButtonText() {
   if (currentText === 'GIF') {
     searchButton.textContent = "Search GIFs"
@@ -80,25 +81,26 @@ function changeSearchButtonText() {
   }
 }
 
-
+// CREATE NEW GIF
 function createNewGif(url) {
+  clearExisting()
   const gifElement = document.createElement("img")
   gifElement.src = url
   gifElement.classList.add("gif-element")
   gifsContainer.appendChild(gifElement)
 }
 
-
+// CLEAR EXISTING DATA
 function clearExisting() {
   // loop through the gifs container div and check how many children (<img>) are present
   for (let item of gifsContainer.children) {
-    if (gifsContainer.children.length > 0) {
+    if (gifsContainer.children.length == 10) {
       gifsContainer.removeChild(item)
     }
   }
 }
 
-
+// ASYNC GIF/STICKER SEARCH FUNCTION
 async function search(searchEndpoint) {
   clearExisting()
 
@@ -123,7 +125,7 @@ async function search(searchEndpoint) {
   }
 }
 
-
+// SEARCH BUTTON
 searchButton.addEventListener('click', () => {
   if (currentText === 'GIF') {
     search(gifSearch)
