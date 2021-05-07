@@ -25,13 +25,22 @@ let currentText = null
 for (let i=0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     let current = document.getElementsByClassName("active")
+
+    // if there is no cative class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "")
+    }
+
+    //add the active class to the current/clicked button
+    this.className += " active"
+
+    // save active button name into currentText
+    currentText = current[0].textContent
+
+    // Search bar visibility
     searchInput.style.visibility = "visible"
     searchButton.style.visibility = "visible"
 
-    current[0].className = current[0].className.replace(" active", "")
-    this.className += " active"
-    currentText = current[0].textContent
-    
     changeSearchButtonText()
   })
 }
