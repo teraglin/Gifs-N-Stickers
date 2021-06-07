@@ -17,13 +17,15 @@ When searching for a gif or a sticker, this application will retrieve all availa
 
 ### *Gifs n Stickers* was made by
 
-> #### **Victor Zottman**
-> **Git Hub:** https://github.com/victorzottmann
+> #### **Victor Zottmann**
+> **GitHub:** https://github.com/victorzottmann
+> **LinkedIn:** https://www.linkedin.com/in/vzottmann/
+> **Twitter:** https://twitter.com/vzcodes
 
 > #### **Aidan Kirvan**
-> **Git Hub:** https://github.com/teraglin
+> **GitHub:** https://github.com/teraglin
 > **LinkedIn:** https://www.linkedin.com/in/aidan-kirvan-376b0a1ba/
 > **Twitter:** [@kakaposaur](https://twitter.com/kakaposaur)
 
 > #### **Timothy Dunk**
-> **Git Hub:** https://github.com/TimothyDunk
+> **GitHub:** https://github.com/TimothyDunk
