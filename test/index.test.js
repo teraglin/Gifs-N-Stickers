@@ -6,5 +6,5 @@ test("API is true", () => {
 });
 
 test("API is API key", () => {
-    expect(apiKey).toBe("api_key=JmE2acrnUQEHtsxRr3mlqvN33cpM5Qm8");
+    expect(apiKey).toBe("&api_key=JmE2acrnUQEHtsxRr3mlqvN33cpM5Qm8");
 });
