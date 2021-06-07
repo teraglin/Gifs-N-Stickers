@@ -20,7 +20,7 @@ When searching for a gif or a sticker, this application will retrieve all availa
 > #### **Victor Zottmann**
 > **GitHub:** https://github.com/victorzottmann
 > **LinkedIn:** https://www.linkedin.com/in/vzottmann/
-> **Twitter:** https://twitter.com/vzcodes
+> **Twitter:** [@vzcodes](https://twitter.com/vzcodes)
 
 > #### **Aidan Kirvan**
 > **GitHub:** https://github.com/teraglin
